@@ -8,3 +8,174 @@
 a {
     text-decoration: none;
 }
+
+            /*  * Navbar hissesi *  */
+header{
+    width: 100%;
+    height: 838px;
+    background: no-repeat url(images/women-1.jpg);
+}
+nav{
+    width: 100%;
+    position:  fixed;
+    top: 0;
+    left: 0;
+}
+.navbar{
+    max-width: 1260px;
+    width: 100%;
+    height: 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.nav-brand h1{
+    margin-bottom: 30px;
+    font-size: 45px;
+    color: #fff;
+}
+.nav-link ul {
+    width: 100%;
+    height: 68px;
+    display: flex;
+    gap: 10px;
+}
+.nav-link ul li {
+    padding: 10px 10px;
+}
+.nav-link ul li span{
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link ul li a{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+}
+.nav-link ul li a:after,
+.for-dropdown:after,
+.for-dropdown-blocks:after{
+    content: "";
+    position: absolute;
+    margin-top: 2px;
+    width: 0;
+    left: 0;
+    bottom: -11px;
+    height: 3px;
+    border: none;
+    background-color: #6f42c1;
+    transition: width 0.8s;
+}
+.for-dropdown:after,
+.for-dropdown-blocks:after{
+    bottom: 0;
+    left: 21px;
+}
+.for-dropdown-blocks:after{
+    left: 15px;
+}
+.nav-link ul li a:hover:after,
+.for-dropdown:hover:after,
+.for-dropdown-blocks:hover:after{
+    width: 30px;
+}
+
+.sec-center {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    z-index: 200;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+.dropdown:checked + label,
+.dropdown:not(:checked) + label,
+.dropdown-blocks:checked + label,
+.dropdown-blocks:not(:checked) + label{
+    position: relative;
+    width: 150px;
+    transition: all 200ms linear;
+    font-weight: 700;
+    padding: 10px 5px ;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+.section-dropdown,
+.section-dropdown-blocks{
+    position: absolute;
+    background-color: #1f2732;
+    top: 55px;
+    left: 10px;
+    max-width: 170px;
+    width: 100%;
+    height: 148px;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 200ms linear;
+}
+.dropdown-blocks:checked + label,
+.dropdown-blocks:not(:checked) + label{
+    width: 200px;
+}
+.section-dropdown-blocks {
+    max-width: 179px;
+    height: 270px;
+}   
+.dropdown:checked ~ .section-dropdown,
+.dropdown-blocks:checked ~ .section-dropdown-blocks{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.section-dropdown:before {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    content: '';
+    display: block;
+    z-index: 1;
+}
+.sec-center a {
+    position: relative;
+    color: #fff;
+    transition: all 200ms linear;
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin: 15px 4px;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+.sec-center a:hover {
+    color: #102770;
+    background-color: #ffeba7;
+    text-decoration:  #102770;
+}
+.for-dropdown i,
+.for-dropdown-blocks i{
+    padding-left: 5px;
+}
+
