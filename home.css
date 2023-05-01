@@ -13,7 +13,10 @@ a {
 header{
     width: 100%;
     height: 838px;
-    background: no-repeat url(images/women-1.jpg);
+    background: no-repeat linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+        ), url(images/women-1.jpg) left / cover     ;
 }
 nav{
     width: 100%;
@@ -170,12 +173,99 @@ nav{
     justify-content: space-between;  
 }
 .sec-center a:hover {
-    color: #102770;
-    background-color: #ffeba7;
+    background-color: #b539cf;
     text-decoration:  #102770;
 }
 .for-dropdown i,
 .for-dropdown-blocks i{
     padding-left: 5px;
+}
+
+            /* * Main * */
+main{
+    max-width: 1260px;
+    width: 100%;
+    height: 538px;
+    display: flex;
+    justify-content: space-around;
+    padding: 190px  20px 0 20px;
+    margin: 0 auto;
+}
+.main-title{
+    max-width: 687px;
+    width: 100%;
+    height: 259px;
+    padding-top: 150px;
+    color: #fff;
+}
+.main-title h1{
+    font-size: 48px;
+    padding-bottom: 28px;
+}
+.main-title p{
+    padding-bottom: 41px;
+}
+
+.main-title .button {
+    max-width: 237px;
+    background-color: #b539cf;
+    border: 2px solid #b539cf;
+    font-weight: 800;
+    padding: 20px 0px;
+    color: #fff;
+    display: block;
+    background: linear-gradient(to right, #fff 50%, #b539cf 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+.main-title .button:hover  {
+    background-position: left bottom;
+    cursor: pointer;
+}
+.text {
+    max-width: 237px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px; 
+    color: #fff;
+    transition: all .6s ease-out;
+    display: block;
+}
+.main-title .button:hover .text{
+    color: #b539cf;
+    cursor: pointer;
+}
+.main-card{
+    max-width: 433px;
+    width: 100%;
+    height: 514px;
+    background-color: #fff;
+    padding: 3.8rem 2.8rem 4rem;
+    text-align: center;
+}
+.main-card p{
+    padding: 3px 0 20px;
+}
+.main-card label input{
+    width: 100%;
+    padding: 25px 16px;
+    border: none;
+    margin: 10px;
+    background-color: #f3f3f3;
+}
+.main-card button{
+    width: 100%;
+    padding: 25px 16px;
+    margin-left: 3%;
+    font-weight: 800;
+    background-color: #b539cf;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+.main-card button:hover{
+    cursor: pointer;
+    background-color: rgba(181, 57, 207, 0.9);
 }
 
