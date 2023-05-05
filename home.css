@@ -207,7 +207,7 @@ main{
     padding-bottom: 41px;
 }
 
-.main-title .button, .about-card .button {
+.main-title .button, .about-card .button,.discuss-card .button {
     max-width: 237px;
     background-color: #b539cf;
     border: 2px solid #b539cf;
@@ -221,12 +221,14 @@ main{
     transition: all .5s ease-out;
 }
 .main-title .button:hover,
-.about-card .button:hover{
+.about-card .button:hover,
+.discuss-card .button:hover{
     background-position: left bottom;
     cursor: pointer;
 }
 .main-title .text,
-.about-card .text{
+.about-card .text,
+.discuss-card.text{
     max-width: 237px;
     text-align: center;
     font-size: 16px;
@@ -236,7 +238,8 @@ main{
     display: block;
 }
 .main-title .button:hover .text,
-.about-card .button:hover .text{
+.about-card .button:hover .text,
+.discuss-card .button:hover .text{
     color: #b539cf;
     cursor: pointer;
 }
@@ -508,6 +511,7 @@ main{
         rgba(0, 0, 0, 0.7)
         ), url(images/interion.jpg) left / cover;  
     position: relative;
+    overflow: hidden;
 }
 .test-title{
     text-align: center;
@@ -530,6 +534,7 @@ main{
     opacity: 0;
     position: absolute;
     transition: all 0.5s;
+    
 } 
 .content1{
     left: -100%;
@@ -720,4 +725,42 @@ main{
 #news-i2:checked ~ .news-control label[for="news-i2"] {
     color: #b539cf;
     cursor: pointer;
+}
+
+            /* * Discuss * */
+.discuss{
+    max-width: 1600px;
+    width: 100%;
+    height: 521px;
+    background: no-repeat linear-gradient(
+        rgba(10, 10, 10, 0.6), 
+        rgba(10, 10, 10, 0.6)
+        ), url(images/office-4.jpg) left / cover;
+    position: relative;
+}
+.discuss-card{
+    max-width: 1260px;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px 0;
+}
+.discuss-card h1{
+    font-size: 48px;
+}
+.discuss-card h4{
+    padding: 24px 0 51px;
+    font-weight: 300;
+}
+.discuss-card .button{
+    width: 237px;
+    position: absolute;
+    left: 50%;
+    top: 97%;
+    transform: translate(-50%, -50%);
 }
