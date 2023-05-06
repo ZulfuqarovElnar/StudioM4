@@ -772,6 +772,7 @@ main{
     height: 724px;
     padding: 90px 0;
     position: relative;
+    overflow: auto;
 }
 .our-title{
     text-align: center;
@@ -830,11 +831,11 @@ main{
     text-align: center;
 }
 .our-box p{
-    padding: 10px 0 20px;
+    padding: 10px 0 5px;
 }
 .our-icon{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
 }
 .our-icon a{
@@ -854,4 +855,119 @@ main{
 }
 .our-icon a:hover i{
     color: #b539cf;
+}
+
+            /* * Let's Talk * */
+.talk{
+    max-width: 1600px;
+    width: 100%;
+    height: 702px;
+    background-color: #101010;
+    position: relative;
+    padding: 20px 0 50px;
+    overflow: auto;
+}
+.talk-card{
+    max-width: 1260px;
+    width: 100%;
+    height: 436px;
+    padding: 0 15px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-items: center;
+    gap: 50px;
+}
+.talk-about{
+    max-width: 481px;
+    width: 100%;
+    height: 320px;
+    color: #fff;
+    padding: 20px 0;
+}
+.talk-about h1{
+    font-size: 48px;
+}
+.talk-about .text{
+    color: #b539cf;
+    padding: 20px 0 35px;
+    font-weight: 700;
+}
+.talk-about p{
+    width: 83%;
+    padding-bottom: 36px;
+    line-height: 26px;
+    color: #acacac;
+}
+.talk-icon{
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.talk-icon a{
+    max-width: 52px;
+    width: 100%;
+    height: 52px;
+    border: 2px solid #b539cf;
+    border-radius: 50%;
+    padding: 16px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+.talk-icon a:hover   {
+    margin-top: 10px;
+}
+.talk-icon a i{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    color: #fff;
+}
+.talk-icon a:hover i{
+    color: #b539cf;
+}
+
+.talk-contact{
+    max-width: 696px;
+    width: 100%;
+    height: 536px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.talk-contact div{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.talk-contact div input{
+    max-width: 290px;
+    width: 100%;
+    padding: 16px 0;
+    background-color: #101010;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #747474;
+}
+.talk-contact input,
+.talk-contact textarea {
+    width: 100%;
+    background-color: #101010;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #747474;
+    padding: 16px 0;
+}
+.talk-contact button{
+    width: 212px;
+    padding: 16px;
+    font-size: 15px;
+    background-color: #b539cf;
+    color: #fff;
+    border: #b539cf;
+    font-weight: 700;
+    cursor: pointer;
 }
