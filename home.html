@@ -18,28 +18,31 @@
                 <div class="nav-brand" >
                     <h1 id="logo">StudioM4.</h1>
                 </div>
+                <input type="checkbox" id="active">
+                <label for="active" class="menu-btn"><span></span></label>
+                <label for="active" class="close"></label>
                 <div class="nav-link">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <div class="sec-center"> 	
-                            <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+                        <li><a href="#home">Home</a></li>
+                        <div class="sec-center"> 
+                            <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>	
                             <label class="for-dropdown" for="dropdown">Live Demo <i class="fa-sharp fa-solid fa-caret-down"></i></label>
                             <div class="section-dropdown"> 
-                                <a href="#">Web Design</a>
-                                <a href="#">Digital Marketing</a>
-                                <a href="#">Creative Studio</a>
+                                <a href="#web">Web Design</a>
+                                <a href="#news">Digital Marketing</a>
+                                <a href="#team">Creative Studio</a>
                             </div>
                         </div>
                         <div class="sec-center"> 	
                                 <input class="dropdown-blocks" type="checkbox" id="dropdown-blocks" name="dropdown"/>
                                 <label class="for-dropdown-blocks" for="dropdown-blocks">Live Demo Blocks <i class="fa-sharp fa-solid fa-caret-down"></i></label>
                                 <div class="section-dropdown-blocks">    
-                                    <a href="#">Headers / Counter</a>
-                                    <a href="#">Features / Info</a>
-                                    <a href="#">Content</a>
-                                    <a href="#">Images / Videos</a>
-                                    <a href="#">Testimonials / Team</a>
-                                    <a href="#">Contacts / Sliders</a>
+                                    <a href="#talk">Headers / Counter</a>
+                                    <a href="#news">Features / Info</a>
+                                    <a href="#web">Content</a>
+                                    <a href="#about">Images / Videos</a>
+                                    <a href="#team">Testimonials / Team</a>
+                                    <a href="#talk">Contacts / Sliders</a>
                                 </div>
                         </div>
                         <li><a href="">Buy Now</a></li>
@@ -51,7 +54,7 @@
 
             <!-- * Main * -->
 
-        <main>
+        <main id="home">
             <div class="main-title">
                 <h1>Creative Studio</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui enim, pharetra
@@ -73,7 +76,7 @@
     </header>
 
             <!-- * Services * -->
-    <section class="service">
+    <section class="service" id="web">
         <h1>Services.</h1>
         <div class="service-grid">
             <div class="service-card">
@@ -86,7 +89,7 @@
             </div>
             <div class="service-card">
                 <i class="fa-solid fa-rocket icon"></i>
-                <h2>Bright project</h2>
+                <h2>Project discussion</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper elementum
                 </p>
@@ -94,7 +97,7 @@
             </div>
             <div class="service-card">
                 <i class="fa-regular fa-object-ungroup icon"></i>
-                <h2>Bright project</h2>
+                <h2>Signing a contract</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper elementum
                 </p>
@@ -102,7 +105,7 @@
             </div>
             <div class="service-card">
                 <i class="fa-solid fa-display icon"></i>
-                <h2>Bright project</h2>
+                <h2>Media Planning</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper elementum
                 </p>
@@ -110,7 +113,7 @@
             </div>
             <div class="service-card">
                 <i class="fa-regular fa-file-lines icon"></i>
-                <h2>Bright project</h2>
+                <h2>Content Strategy</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper elementum
                 </p>
@@ -118,7 +121,7 @@
             </div>
             <div class="service-card">
                 <i class="fa-regular fa-message icon"></i>
-                <h2>Bright project</h2>
+                <h2>Social Media</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper elementum
                 </p>
@@ -128,7 +131,7 @@
     </section>
 
             <!-- * About Us * -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-grid">
             <div class="about-card">
                 <h1>About us.</h1>
@@ -182,7 +185,7 @@
     </section>
 
             <!-- * Testimonials * -->
-    <section class="test">
+    <section class="test" id="team">
         <div class="test-title">
             <h1>Testimonials</h1>
         </div>
@@ -214,7 +217,7 @@
     </section>
 
             <!-- * News * -->
-    <section class="news">
+    <section class="news" id="news">
         <div class="news-title">
             <h1>Latest News.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper
@@ -354,7 +357,7 @@
     </section>
 
                 <!-- * Let's Talk * -->
-    <section class="talk">
+    <section class="talk" id="talk">
         <div class="talk-card">
             <div class="talk-about">
                 <h1>Let's Talk</h1>

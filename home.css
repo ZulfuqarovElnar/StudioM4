@@ -35,6 +35,9 @@ nav{
     margin: 0 auto;
     padding: 0 20px;
 }
+.navbar #active, .navbar .menu-btn, .navbar .close{
+    display: none;
+}
 .nav-brand h1{
     margin-bottom: 30px;
     font-size: 45px;
@@ -526,7 +529,7 @@ main{
 
 .test-card {
     max-width: 718px;
-    width: 300%;
+    width: 100%;
     height: 259px;
     text-align: center;
     margin: 0 auto;
@@ -534,7 +537,6 @@ main{
     opacity: 0;
     position: absolute;
     transition: all 0.5s;
-    
 } 
 .content1{
     left: -100%;
@@ -754,7 +756,7 @@ main{
     font-size: 48px;
 }
 .discuss-card h4{
-    padding: 24px 0 51px;
+    padding: 24px 0 21px;
     font-weight: 300;
 }
 .discuss-card .button{
@@ -1019,4 +1021,188 @@ footer{
 .footer-card ul li:hover a:after{
     cursor: pointer;
     width: 60px;
+}
+
+            /*  * Responsive * */
+@media screen and (max-width: 866px) {
+            /* * Navbar * */
+    .navbar #active, .navbar .menu-btn, .navbar .close{
+        display: block;
+        margin-top: 29px;
+    }
+    .nav-link{
+        max-width: 1600px;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        height: 500px;
+        width: 100%;
+        background: rgba(31, 39, 50, 0.9);
+        transition: all 0.6s ease-in-out;
+        z-index: -10;
+        padding-bottom: 0;
+    }
+    .nav-link:hover{
+        height: 900px;
+    }
+    #active:checked ~ .nav-link{
+        top:0px;
+    }
+    .menu-btn{
+        position: absolute;
+        z-index: 20;
+        right: 20px;
+        top: 20px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .menu-btn span,
+    .menu-btn:before,
+    .menu-btn:after{
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 30%;
+        width: 40%;
+        text-align: center;
+        border-bottom: 2px solid #fff;
+        transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .menu-btn:before{
+        transform: translateY(-8px);
+    }
+    .menu-btn:after{
+        transform: translateY(8px);
+    }
+    .close {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transition: background .6s;
+    }
+    
+    /* closing animation */
+    #active:checked + .menu-btn span {
+        transform: scaleX(0);
+    }
+    #active:checked + .menu-btn:before {
+        transform: rotate(45deg);
+        border-color: #fff;
+    }
+    #active:checked + .menu-btn:after {
+        transform: rotate(-45deg);
+        border-color: #fff;
+    }
+    .nav-link ul{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .nav-link ul li a{
+        font-size: 25px;
+    }
+    .sec-center{
+        font-size: 20px;
+    }
+    .section-dropdown,
+    .section-dropdown-blocks{
+        position: relative;
+        margin: 0 auto;
+        top: -10px;
+        height: 0;
+    }
+    .dropdown:checked ~ .section-dropdown{
+        height: 120px;
+    }
+    .dropdown-blocks:checked ~ .section-dropdown-blocks{
+        height: 240px;
+    }
+        /* * Main * */
+    header{
+        overflow: auto;
+        height: 1200px;
+    }
+    main{
+        display: grid;
+        height: 1000px;
+        gap: 250px;
+        padding: 0px 20px;
+        place-items: center;
+    }
+    .main-card{
+        max-width: 687px;
+    }
+            /* * About Us * */
+    .about{
+        height: 1000px;
+        overflow: auto;
+        gap: 20px;
+    }
+    .about-grid{
+        height: 900px;
+        display: grid;
+        padding: 20px;
+        overflow: auto;
+    }
+    .about-card p{
+        height: 100px;
+        overflow: auto;
+    }
+    .about-video{
+        height: 400px;
+    }
+            /* * Discuss * */
+    .discuss-card h1{
+        font-size: 35px;
+    }
+            /* * Project * */
+    .project{
+        padding-bottom: 100px;
+    }
+            /* * Testimonials * */
+    .test-title h1{
+        font-size: 40px;
+    }
+    .controls label{
+        top: 320px;
+        left: 45%;
+    }
+            /* * News * */
+    .news{
+        height: 1100px;
+    }
+            /* * Talk * */
+    .talk-contact div{
+        display: flex;
+        flex-direction: column;
+    }
+    .talk-contact div input{
+        max-width: 860px;
+        width: 100%;
+        padding: 20px;
+    }
+            /* * Footer * */
+    footer{
+        height: 120px;
+        overflow: auto;
+    }
+    .footer-card {
+        display: grid;
+        place-items: center;
+        gap: 20px;
+    }
 }
